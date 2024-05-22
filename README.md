@@ -25,15 +25,11 @@ Where:
 
 Once the MSA data has been preprocessed, it follows the steps:
 
-1. **Estimates the frequency counts** $ f_i(A) $ and $ f_{ij}(A, B) $ from the MSA, using the pseudocount $\lambda = M_{eff}$  in Eqs. 1 and 2.
+1. **Estimates the frequency counts** $f_i(A)$ and $f_{ij}(A, B)$ from the MSA, using the pseudocount $\lambda = M_{eff}$  in Eqs. 1 and 2.
 
-    $$
-    f_i(A) = \frac{1}{M_{eff}+\lambda} \left( \frac{\lambda}{q}+ \sum_{a=1}^{M} \frac{1}{m^a} \delta(A, A_i^a) \tag{1} \right)
-    $$
+    $$f_i(A) = \frac{1}{M_{eff}+\lambda} \left( \frac{\lambda}{q}+ \sum_{a=1}^{M} \frac{1}{m^a} \delta(A, A_i^a) \tag{1} \right)$$
 
-    $$
-    f_{ij}(A, B) = \frac{1}{M_{eff}+\lambda}  \left(\frac{\lambda}{q^2} +\sum_{a=1}^{M} \frac{1}{m^a}  \delta(A, A_i^a) \delta(B, A_j^a) \tag{2} \right)
-    $$
+    $$f_{ij}(A, B) = \frac{1}{M_{eff}+\lambda}  \left(\frac{\lambda}{q^2} +\sum_{a=1}^{M} \frac{1}{m^a}  \delta(A, A_i^a) \delta(B, A_j^a) \tag{2} \right)$$
 
 2. **Determines the empirical estimate of the connected-correlation matrix** $ C_{ij}(A, B) $ using Eq. 3.
 
