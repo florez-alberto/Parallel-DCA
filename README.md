@@ -31,31 +31,21 @@ Once the MSA data has been preprocessed, it follows the steps:
 
     $$f_{ij}(A, B) = \frac{1}{M_{eff}+\lambda}  \left(\frac{\lambda}{q^2} +\sum_{a=1}^{M} \frac{1}{m^a}  \delta(A, A_i^a) \delta(B, A_j^a) \tag{2} \right)$$
 
-2. **Determines the empirical estimate of the connected-correlation matrix** $ C_{ij}(A, B) $ using Eq. 3.
+2. **Determines the empirical estimate of the connected-correlation matrix** $C_{ij}(A, B)$ using Eq. 3.
 
-    $$
-    C_{ij}(A, B) = f_{ij}(A, B) - f_i(A) f_j(B) \tag{3}
-    $$
+    $$C_{ij}(A, B) = f_{ij}(A, B) - f_i(A) f_j(B) \tag{3}$$
 
-3. **Determines the couplings** $ e_{ij}(A, B) $ according to the second part of Eq. 4.
-    $$
-    e_{ij}(A, B) =  -(C^{-1})_{ij}(A, B) \tag{4}
-    $$
+3. **Determines the couplings** $e_{ij}(A, B)$ according to the second part of Eq. 4.
+    $$e_{ij}(A, B) =  -(C^{-1})_{ij}(A, B) \tag{4}$$
 
-4. **For each column pair** $ i < j $, estimates the direct information $ DI_{ij} $ by solving Eqs. 5 and 6 for $ P_{ij}^{(dir)}(A, B) $, and plugs the results into Eq. 7.
+4. **For each column pair** $ i < j $, estimates the direct information $ DI_{ij} $ by solving Eqs. 5 and 6 for $P_{ij}^{(dir)}(A, B)$, and plugs the results into Eq. 7.
 
-    $$
-    P_{ij}^{(dir)}(A, B) = \frac{\exp(e_{ij}(A, B) + h_i(A) + h_j(B))}{Z_{ij}} \tag{5}
-    $$
+    $$P_{ij}^{(dir)}(A, B) = \frac{\exp(e_{ij}(A, B) + h_i(A) + h_j(B))}{Z_{ij}} \tag{5}$$
 
-    $$
-    f_{i}(A) = \sum_{B}P_{ij}^{(dir)}(A, B), \quad 
-    f_{j}(B) = \sum_{A}P_{ij}^{(dir)}(A, B) \tag{6} 
-    $$
+    $$f_{i}(A) = \sum_{B}P_{ij}^{(dir)}(A, B), \quad 
+    f_{j}(B) = \sum_{A}P_{ij}^{(dir)}(A, B) \tag{6} $$
 
-    $$
-    DI_{ij} = \sum_{A, B} P_{ij}^{(dir)}(A, B) \ln \left( \frac{P_{ij}^{(dir)}(A, B)}{f_i(A) f_j(B)} \right) \tag{7}
-    $$
+    $$DI_{ij} = \sum_{A, B} P_{ij}^{(dir)}(A, B) \ln \left( \frac{P_{ij}^{(dir)}(A, B)}{f_i(A) f_j(B)} \right) \tag{7}$$
 
 ## Features
 
