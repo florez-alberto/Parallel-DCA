@@ -10,10 +10,8 @@ Parallel-DCA is a python script designed to perform Direct Coupling Analysis (DC
 The preprocessing step handles gaps and filters columns based on a gap cutoff, as follows:
 
 $$
-\text{filteredMSA} = \left\{
+\text{filteredMSA} = 
   \text{column} \in \text{MSA} \mid \frac{\text{count}(\text{gaps in column})}{\text{numSequences}} < \text{gapCutoff}
-\right\}
-\
 $$
 
 
